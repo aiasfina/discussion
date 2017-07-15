@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require("webpack")
 
 module.exports = {
     entry: './javascripts/index.js',
@@ -18,6 +19,11 @@ module.exports = {
                 loader: 'style-loader!css-loader!sass-loader'
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ]
 }
-  
