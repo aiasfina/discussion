@@ -7,18 +7,7 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1"
 
   body
-    div.masthead
-      div.container
-        nav.nav
-          == render_template "layouts/_nav.slang"
-    div.container
-      div.row
-      - flash.each do |key, value|
-        div class="alert alert-#{ key }"
-          p = flash[key]
-      div.row
-        div.col-sm-12.main
-          == content
+    == content
 
     script src="/assets/app.js"
 
