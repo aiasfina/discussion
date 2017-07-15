@@ -26,7 +26,7 @@ const view = vnode => {
           <li><a href="#">Next</a></li>
         </ul>
         <ul className="nav-menu nav-menu---right">
-          <li><a href="#" onclick={state.startLogin}>Login</a></li>
+          <li><a className="btn btn-primary nav-login-btn" href="#" onclick={state.startLogin}>Login</a></li>
         </ul>
         {state.isLogin() ? <Login isLogin={state.isLogin}></Login> : null}
       </div>
