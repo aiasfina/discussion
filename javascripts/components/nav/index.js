@@ -35,7 +35,7 @@ const view = vnode => {
 }
 
 export default {
-  isLogin: stream(false),
+  isLogin: stream(true),
   oninit,
   view
 }

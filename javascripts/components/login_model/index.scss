@@ -1,0 +1,11 @@
+.modal {
+  &.modal---login {
+    .modal-header {
+      .modal-title {
+        margin: 0 auto;
+        font-weight: 400;
+        color: #999;
+      }
+    }
+  }
+}

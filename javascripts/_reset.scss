@@ -14,3 +14,22 @@ a {
     color: $brand-primary-active;
   }
 }
+
+form {
+  &.form---combine {
+    .form-control {
+      border-bottom: none !important;
+      &:last-child {
+        border-bottom: solid 1px #ddd !important;
+      }
+    }
+  }
+}
+
+.form-control {
+  border-radius: 0 !important;
+  outline: none;
+  box-shadow: none;
+  border: solid 1px #ddd !important;
+  padding: 15px !important;
+}
