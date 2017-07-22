@@ -22,7 +22,9 @@ Amber::Server.instance.config do |app|
   end
 
   routes :web do
-    resources "/postss", PostsController
     get "/", HomeController, :index
+    resources "/postss", PostsController
+    post "/login", SessionsController, :create
+    delete "/logout", SessionsController, :destroy
   end
 end

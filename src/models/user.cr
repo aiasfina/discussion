@@ -31,10 +31,6 @@ class User < Granite::ORM
     end
   end
 
-  def self.login_from_cookie(id : Int64)
-    User.find(id)
-  end
-
   def self.encrypt_password(password : String, salt : String | Nil)
     salt = salt.as(String)
     Crypto::Bcrypt.new(password, salt).to_s
