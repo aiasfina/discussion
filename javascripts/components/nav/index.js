@@ -1,14 +1,13 @@
 require('./index.scss')
 
 import m from 'mithril'
-import stream from 'mithril/stream'
 import Login from '../login_model'
 
 const oninit = vnode => {
   const state = vnode.state
 
   state.startLogin = () => {
-    state.isLogin(true)
+    Login.isLogin(true)
   }
 }
 
@@ -28,14 +27,12 @@ const view = vnode => {
         <ul className="nav-menu nav-menu---right">
           <li><a className="btn btn-primary nav-login-btn" href="#" onclick={state.startLogin}>Login</a></li>
         </ul>
-        {state.isLogin() ? <Login isLogin={state.isLogin}></Login> : null}
       </div>
     </nav>
   )
 }
 
 export default {
-  isLogin: stream(true),
   oninit,
   view
 }

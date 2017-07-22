@@ -2,6 +2,7 @@ require('./index.scss')
 require('bootstrap/js/src/modal')
 
 import m from 'mithril'
+import stream from 'mithril/stream'
 import SignInForm from './signin_form'
 
 const oninit = vnode => {
@@ -10,7 +11,7 @@ const oninit = vnode => {
 const oncreate = vnode => {
   vnode.state.modal = $(vnode.dom).modal('show')
   vnode.state.modal.on('hidden.bs.modal', () => {
-    vnode.attrs.isLogin(false)
+    vnode.state.isLogin(false)
     m.redraw()
   })
 }
@@ -33,6 +34,7 @@ const view = vnode => {
 }
 
 export default {
+  isLogin: stream(false),
   oninit,
   oncreate,
   view
