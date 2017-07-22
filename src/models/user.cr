@@ -10,6 +10,7 @@ class User < Granite::ORM
   field email : String
   field salted_password : String
   field salt : String
+  field remember_me_token : String
   timestamps
 
   def self.create_one(name : String, email : String, password : String)
